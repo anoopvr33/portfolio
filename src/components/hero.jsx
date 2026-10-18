@@ -225,23 +225,21 @@ const Hero = () => {
 
           <div className="project-track">
             {projects.map((project, index) => (
-              <div>
-                <a
-                  href={project.link}
-                  className="project-card"
-                  key={project.title}
-                >
-                  <div className="project-image">
-                    <img src={project.image} alt={project.title} />
-                    <span className="project-arrow">↗</span>
-                    <span className="project-index">0{index + 1}</span>
-                  </div>
+              <a
+                href={project.link}
+                className="project-card"
+                key={project.title}
+              >
+                <div className="project-image">
+                  <img src={project.image} alt={project.title} />
+                  <span className="project-arrow">↗</span>
+                  <span className="project-index">0{index + 1}</span>
+                </div>
 
-                  <div className="project-info">
-                    <h4>{project.title}</h4>
-                    <span>{project.category}</span>
-                  </div>
-                </a>
+                <div className="project-info">
+                  <h4>{project.title}</h4>
+                  <span>{project.category}</span>
+                </div>
                 <a
                   style={{ fontSize: "10px" }}
                   href={project.git}
@@ -250,7 +248,7 @@ const Hero = () => {
                 >
                   View Source
                 </a>
-              </div>
+              </a>
             ))}
           </div>
         </section>
