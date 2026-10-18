@@ -41,19 +41,22 @@ const Hero = () => {
       title: "Fashion Marketplace",
       category: "E-commerce · Next.js, Node.js, Tailwind, Razorpay",
       image: "/commerce.jpeg",
-      link: "https://github.com/anoopvr33/shop-market.git",
+      link: "https://shop-market-l4e2.vercel.app/",
+      git: "https://github.com/anoopvr33/shop-market.git",
     },
     {
       title: "Modern ERP System",
       category: "Web Design · React, Redux, MUI",
       image: "daan.jpeg",
       link: "https://erp.daanhotels.com/dashboard?index=1",
+      git: "https://github.com/anoopvr33/DaanERP.git",
     },
     {
       title: "Houseboat Booking Platform",
       category: "Static · React",
       image: "tolake.jpeg",
       link: "https://tolake.in",
+      git: "https://github.com/anoopvr33/TolakeGit.git",
     },
   ];
 
@@ -168,7 +171,15 @@ const Hero = () => {
 
         <section className="portfolio-intro">
           <div className="intro-visual">
-            <img src="janvi.jpeg" alt="" />
+            <a
+              style={{ position: "relative", display: "inline-block" }}
+              href="https://janvi-saloon.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="janvi.jpeg" alt="" />{" "}
+              <span className="project-arrow">↗</span>{" "}
+            </a>
             {/* <div className="intro-orbit">
               <span></span>
             </div> */}
@@ -214,22 +225,32 @@ const Hero = () => {
 
           <div className="project-track">
             {projects.map((project, index) => (
-              <a
-                href={project.link}
-                className="project-card"
-                key={project.title}
-              >
-                <div className="project-image">
-                  <img src={project.image} alt={project.title} />
-                  <span className="project-arrow">↗</span>
-                  <span className="project-index">0{index + 1}</span>
-                </div>
+              <div>
+                <a
+                  href={project.link}
+                  className="project-card"
+                  key={project.title}
+                >
+                  <div className="project-image">
+                    <img src={project.image} alt={project.title} />
+                    <span className="project-arrow">↗</span>
+                    <span className="project-index">0{index + 1}</span>
+                  </div>
 
-                <div className="project-info">
-                  <h4>{project.title}</h4>
-                  <span>{project.category}</span>
-                </div>
-              </a>
+                  <div className="project-info">
+                    <h4>{project.title}</h4>
+                    <span>{project.category}</span>
+                  </div>
+                </a>
+                <a
+                  style={{ fontSize: "10px" }}
+                  href={project.git}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Source
+                </a>
+              </div>
             ))}
           </div>
         </section>
